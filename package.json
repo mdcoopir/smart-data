@@ -1,0 +1,23 @@
+{
+  "name": "smart-data",
+  "version": "1.0.0",
+  "description": "Smart Data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdcoopir/smart-data.git~.git"
+  },
+  "keywords": [
+    "smart",
+    "data"
+  ],
+  "author": "Mark Cooper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdcoopir/smart-data.git~/issues"
+  },
+  "homepage": "https://github.com/mdcoopir/smart-data.git~#readme"
+}
