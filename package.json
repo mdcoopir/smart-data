@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/mdcoopir/smart-data.git~/issues"
   },
-  "homepage": "https://github.com/mdcoopir/smart-data.git~#readme"
+  "homepage": "https://github.com/mdcoopir/smart-data.git~#readme",
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  }
 }
