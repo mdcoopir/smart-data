@@ -1,14 +1,15 @@
 {
-  "name": "smart-data",
-  "version": "1.0.0",
+  "name": "mdcoopir-smart-data",
+  "version": "1.0.1",
   "description": "Smart Data",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdcoopir/smart-data.git~.git"
+    "url": "git+https://github.com/mdcoopir/smart-data.git"
   },
   "keywords": [
     "smart",
@@ -19,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/mdcoopir/smart-data.git~/issues"
   },
-  "homepage": "https://github.com/mdcoopir/smart-data.git~#readme",
+  "homepage": "https://github.com/mdcoopir/smart-data.git#readme",
   "dependencies": {
     "handlebars": "^4.7.7"
   }

@@ -19,22 +19,25 @@
 <body>
 
   <div data_element="test">
-    <div _value></div>
+    <div _value="test"></div>
     The values stored were
-    <span data_element="first"><div>{{_value}}</div></span>
+    <span data_element="first">
+      <div>{{_value}}</div>
+    </span>
     and
     <span data_element="last">{{_value}}</span>
     <button id="updateData">Update Data</button>
   </div>
 </body>
 
-<script>
-  
-  const smartData = require("smart_data");
+<script type="module">
+  // type="module"
+  // import smart_data from './smart_data';
+  const smart_data = require("./smartData");
   // _value: "testing",
-  const myData = smartData({
+  const myData = smart_dData({
     test: {
-      _value: "testing", 
+      _value: "testing",
       _children: {
         first: {
           _value: 20
@@ -46,25 +49,19 @@
     }
   })
   // const myData = smartData({test: {value: "testing", _children: {first: {value: 30}, last:{value: 'pizza!'}}}})
-  myData._parsed_data.test.change("Test Again");
-  myData._parsed_data.test._children.first.change(30);
+  myData.test.changeValue("Test Again");
+  myData.test._children.first.changeValue(30);
   $("document").ready((e) => {
     const dataNames = Object.keys(myData);
     dataNames.forEach((dataName) => {
-      const dataObject = myData._parsed_data[dataName]
-      $(`[data_element=${dataName}] > *`).children([_value]).forEach((child) => {
-        child.innerHTML = dataObject._value
-      })
+      const dataObject = myData[dataName]
+      const children = $(`[data_element=${dataName}]`).children('[_value]')
+      children.html(dataObject._value);
     })
     $("[data_container]").data(dataName, data()[dataName]);
     $("span").first().text($("div").data("test").first);
     $("span").last().text($("div").data("test").last);
   })
-  /* $("div.update_data button#updateData").on("click", (e) => {
-    $( "div" ).data( "test", { first: 16, last: "pie!" } );
-    $( "span" ).first().text( $( "div" ).data( "test" ).first );
-    $( "span" ).last().text( $( "div" ).data( "test" ).last );
-  }) */
-</script >
+</script>
 
 </html>
